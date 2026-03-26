@@ -7,111 +7,165 @@
   <meta name="description" content="Traité des opérations du réel - Matrice Isomorphique">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   
-  <!-- Thème Docsify (Style Sombre pour l'esthétique technique) -->
+  <!-- Fonts: Combinaison Noto Serif pour le corps et Noto Sans pour la technique -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;700&family=Noto+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Thème de base Docsify -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
   
   <style>
+    /* --- DESIGN SYSTEM PROTOKIN --- */
     :root {
-      /* Palette Protokin : Noir profond, Gris technique, Accents de tension */
-      --theme-color: #e63946; /* Rouge de tension */
-      --base-background: #0f0f0f;
-      --sidebar-background: #1a1a1a;
-      --text-color: #e0e0e0;
-      --sidebar-nav-link-color: #a0a0a0;
+      --theme-color: #bc3a3a; /* Rouge brique / Tension */
+      --base-font-size: 17px;
+      
+      /* Palette Papier Ivoire / NRF */
+      --paper-bg: #fdfcf8;
+      --text-main: #1a1a1a;
+      --sidebar-bg: #f4f1ea;
+      --border-color: #e5e0d5;
     }
 
+    /* Fond général */
     body {
-      font-family: 'Noto Serif', 'Georgia', serif; /* Rappel du style NRF */
-      background-color: var(--base-background);
-      color: var(--text-color);
+      font-family: 'Noto Serif', Georgia, serif;
+      background-color: var(--paper-bg);
+      color: var(--text-main);
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.75;
     }
 
+    /* Sidebar : Style Bibliothèque Classique */
     .sidebar {
       background-color: var(--sidebar-background);
-      border-right: 1px solid #333;
-    }
-
-    .sidebar-nav li a {
+      border-right: 1px solid var(--border-color);
+      color: #444;
       font-family: 'Noto Sans', sans-serif;
-      font-weight: 300;
     }
 
+    .sidebar-nav ul li a {
+      font-size: 14px;
+      font-weight: 400;
+      color: #666;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .sidebar-nav strong {
+      display: block;
+      margin-top: 1.5em;
+      font-family: 'Noto Sans', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-size: 11px;
+      color: var(--theme-color);
+    }
+
+    /* Contenu Markdown */
+    .markdown-section {
+      max-width: 720px; /* Largeur optimale pour la lecture */
+      margin: 0 auto;
+      padding: 45px 15px;
+    }
+
+    /* Titres : Rigueur Scientifique */
     .markdown-section h1, .markdown-section h2, .markdown-section h3 {
       font-family: 'Noto Sans', sans-serif;
       font-weight: 700;
-      letter-spacing: -0.02em;
-      color: #ffffff;
+      margin-top: 2em;
+      color: #000;
     }
 
-    /* Style des équations LaTeX */
-    .katex {
-      font-size: 1.1em !important;
+    .markdown-section h1 { font-size: 2.2em; border-bottom: 2px solid var(--theme-color); padding-bottom: 10px; }
+    .markdown-section h2 { font-size: 1.6em; margin-top: 2.5em; }
+
+    /* Citations / Blocs sensoriels */
+    blockquote {
+      border-left: 3px solid var(--theme-color);
+      background: rgba(188, 58, 58, 0.03);
+      color: #444;
+      font-style: italic;
+      padding: 1em 2em;
+      margin: 2em 0;
     }
 
-    /* Personnalisation de la barre de recherche */
+    /* KaTeX / Mathématiques */
+    .katex-display {
+      margin: 2em 0 !important;
+      padding: 1em;
+      background: #fff;
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+    }
+
+    /* Barre de recherche personnalisée */
     .search input {
-      background-color: #222 !important;
-      border: 1px solid #444 !important;
-      color: white !important;
+      background-color: #fff !important;
+      border: 1px solid var(--border-color) !important;
+      border-radius: 20px !important;
+      font-family: 'Noto Sans', sans-serif;
     }
-    
-    /* Animation de transition */
-    section.content {
-      transition: opacity 0.3s ease;
+
+    /* Responsive adjustments */
+    @media screen and (max-width: 768px) {
+      .markdown-section { padding: 20px; }
+      .sidebar-toggle { background: var(--paper-bg); opacity: 0.9; }
+    }
+
+    /* Style des liens */
+    section.content a {
+      color: var(--theme-color);
+      text-decoration: underline;
+      text-underline-offset: 4px;
     }
   </style>
 </head>
 <body>
-  <div id="app">Initialisation du Système PROTOKIN...</div>
+  <div id="app">Chargement de la Matrice Isomorphique...</div>
 
   <script>
     window.$docsify = {
-      name: 'PROTOKIN',
+      name: '<div style="font-family:Nato Sans; font-weight:700; letter-spacing:2px;">PROTOKIN</div>',
       repo: '',
-      loadSidebar: true, // Nécessite un fichier _sidebar.md
-      loadNavbar: false,
-      mergeNavbar: true,
-      maxLevel: 4,
+      loadSidebar: true,
+      autoHeader: true,
       subMaxLevel: 2,
       auto2top: true,
-      homepage: 'README.md', // Votre fichier d'accueil
+      homepage: 'INTRODUCTION.md',
       
-      // Configuration de la recherche
+      // Plugin Recherche
       search: {
         maxAge: 86400000,
         paths: 'auto',
-        placeholder: 'Rechercher un concept (Hystérésis, Flux...)',
-        noData: 'Aucun résultat trouvé.',
-        depth: 6
+        placeholder: 'Rechercher un concept...',
+        noData: 'Aucun résultat.',
+        depth: 4
       },
 
-      // Pagination
+      // Plugin Pagination
       pagination: {
         previousText: 'Phase Précédente',
         nextText: 'Phase Suivante',
         crossChapter: true,
-        crossChapterText: true,
       },
 
-      // Support LaTeX (via KaTeX)
-      formatUpdated: '{MM}/{DD} {HH}:{mm}',
+      // LaTeX
       executeScript: true
     }
   </script>
 
-  <!-- Scripts Docsify -->
+  <!-- Docsify Core -->
   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
+  
+  <!-- Plugins -->
   <script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
 
-  <!-- Support LaTeX -->
+  <!-- KaTeX pour les équations -->
   <script src="https://cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css"/>
-
-  <!-- Prism pour la coloration syntaxique (si besoin de code technique) -->
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-markdown.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
-
 </body>
 </html>
