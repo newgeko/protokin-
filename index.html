@@ -5,6 +5,20 @@
   <title>Mon Site Markdown</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+
+<style>
+  /* Déplace le bouton du menu en haut à gauche sur mobile */
+  @media screen and (max-width: 768px) {
+    .sidebar-toggle {
+      bottom: auto !important;
+      top: 0 !important;
+      left: 0 !important;
+      background-color: rgba(255, 255, 255, 0.8); /* Fond léger pour plus de visibilité */
+      padding: 10px !important;
+    }
+  }
+</style>
+
 </head>
 <body>
   <div id="app">Chargement...</div>
