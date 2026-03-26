@@ -1,4 +1,4 @@
-# protokin-
+# protokin
 Protokin : Cadre axiomatique pour une théorie des formes sous contraintes et de l'isomorphisme opératoire.
 > **Status**: Operational | **Maturity**: Formal | **Ontology**: Operators | **Order**: 2nd SOC
 
