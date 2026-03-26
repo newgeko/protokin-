@@ -14,146 +14,173 @@
 
   <!-- Thème de base Docsify -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
-  
+
+
   <style>
-    /* --- DESIGN SYSTEM PROTOKIN --- */
     :root {
-      --theme-color: #bc3a3a; /* Rouge brique / Tension */
+      --theme-color: #bc3a3a; /* Rouge de tension / Brique */
       --base-font-size: 17px;
-      
-      /* Palette Papier Ivoire / NRF */
       --paper-bg: #fdfcf8;
       --text-main: #1a1a1a;
-      --sidebar-bg: #f4f1ea;
-      --border-color: #e5e0d5;
+      --sidebar-bg: #f5f2eb;
+      --border-color: #d8d1c5;
+      --search-bg: #ffffff;
     }
 
-    /* Fond général */
     body {
       font-family: 'Noto Serif', Georgia, serif;
       background-color: var(--paper-bg);
       color: var(--text-main);
+      line-height: 1.8;
       -webkit-font-smoothing: antialiased;
-      line-height: 1.75;
     }
 
-/* --- REFONTE DU BOUTON SIDEBAR (TOGGLE) --- */
+    /* --- REFONTE DU BOUTON SIDEBAR (TOGGLE) --- */
     .sidebar-toggle {
-      background-color: var(--sidebar-bg);
-      border: 1px solid var(--border-color);
-      border-radius: 0 8px 8px 0; /* Arrondi seulement sur la droite */
-      padding: 15px 12px 12px 12px !important;
+      background-color: var(--theme-color) !important;
+      border: none !important;
+      border-radius: 0 4px 4px 0 !important;
+      padding: 10px !important;
       left: 0 !important;
       top: 20px !important;
       width: 44px;
       height: 44px;
-      transition: all 0.3s ease;
-      box-shadow: 2px 0 10px rgba(0,0,0,0.05);
-      z-index: 100;
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.15);
+      z-index: 1000;
     }
 
     .sidebar-toggle:hover {
-      background-color: #fff;
-      width: 50px;
+      width: 52px;
+      background-color: #000 !important;
     }
 
     .sidebar-toggle span {
-      background-color: var(--theme-color) !important;
+      background-color: #fff !important;
       height: 2px !important;
-      width: 22px !important;
-      margin-bottom: 5px !important;
-      border-radius: 2px;
+      width: 20px !important;
+      margin-bottom: 4px !important;
+      border-radius: 1px;
     }
 
-    /* Style quand la sidebar est ouverte */
-    body.close .sidebar-toggle {
-      left: 0 !important;
+    /* --- STYLE DE LA BARRE DE RECHERCHE --- */
+    .search {
+      padding: 25px 20px 10px 20px !important;
+      background-color: var(--sidebar-bg);
+      border-bottom: 1px solid var(--border-color);
+      margin-bottom: 20px;
     }
 
-    /* Sidebar : Style Bibliothèque Classique */
+    .search input {
+      background-color: var(--search-bg) !important;
+      border: 1px solid var(--border-color) !important;
+      border-radius: 2px !important;
+      padding: 12px 15px !important;
+      font-family: 'Noto Sans', sans-serif !important;
+      font-size: 13px !important;
+      font-weight: 400 !important;
+      color: #333 !important;
+      box-shadow: inset 0 1px 3px rgba(0,0,0,0.05) !important;
+      transition: all 0.3s ease !important;
+    }
+
+    .search input:focus {
+      border-color: var(--theme-color) !important;
+      box-shadow: 0 0 0 2px rgba(188, 58, 58, 0.1) !important;
+      outline: none;
+    }
+
+    .search .clear-button {
+      right: 25px !important;
+      top: 38px !important;
+    }
+
+    /* --- STRUCTURE SIDEBAR --- */
     .sidebar {
-      background-color: var(--sidebar-background);
+      background-color: var(--sidebar-bg);
       border-right: 1px solid var(--border-color);
-      color: #444;
       font-family: 'Noto Sans', sans-serif;
+      padding-top: 0; /* Aligné avec la recherche en haut */
     }
 
-    .sidebar-nav ul li a {
-      font-size: 14px;
-      font-weight: 400;
-      color: #666;
-      text-decoration: none;
-      transition: color 0.2s;
+    .sidebar-nav {
+        padding: 0 20px 40px 20px !important;
     }
 
     .sidebar-nav strong {
-      display: block;
-      margin-top: 1.5em;
-      font-family: 'Noto Sans', sans-serif;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      font-size: 11px;
       color: var(--theme-color);
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-top: 2.5em;
+      margin-bottom: 0.8em;
+      display: block;
+      opacity: 0.8;
     }
 
-    /* Contenu Markdown */
+    .sidebar-nav ul li a {
+        font-size: 14px;
+        color: #555;
+        border-right: 2px solid transparent;
+        transition: all 0.2s;
+    }
+
+    .sidebar-nav ul li.active > a {
+        color: var(--theme-color) !important;
+        font-weight: 700;
+        border-right: 2px solid var(--theme-color);
+    }
+
+    /* --- ZONE DE TEXTE --- */
     .markdown-section {
-      max-width: 720px; /* Largeur optimale pour la lecture */
+      max-width: 780px;
       margin: 0 auto;
-      padding: 45px 15px;
+      padding: 80px 35px;
     }
 
-    /* Titres : Rigueur Scientifique */
-    .markdown-section h1, .markdown-section h2, .markdown-section h3 {
+    .markdown-section h1 {
       font-family: 'Noto Sans', sans-serif;
       font-weight: 700;
-      margin-top: 2em;
+      font-size: 2.6em;
+      letter-spacing: -1px;
+      border-bottom: 4px solid var(--theme-color);
+      padding-bottom: 20px;
+      margin-bottom: 1.5em;
       color: #000;
     }
 
-    .markdown-section h1 { font-size: 2.2em; border-bottom: 2px solid var(--theme-color); padding-bottom: 10px; }
-    .markdown-section h2 { font-size: 1.6em; margin-top: 2.5em; }
-
-    /* Citations / Blocs sensoriels */
-    blockquote {
-      border-left: 3px solid var(--theme-color);
-      background: rgba(188, 58, 58, 0.03);
-      color: #444;
-      font-style: italic;
-      padding: 1em 2em;
-      margin: 2em 0;
-    }
-
-    /* KaTeX / Mathématiques */
-    .katex-display {
-      margin: 2em 0 !important;
-      padding: 1em;
-      background: #fff;
-      border: 1px solid var(--border-color);
-      border-radius: 4px;
-    }
-
-    /* Barre de recherche personnalisée */
-    .search input {
-      background-color: #fff !important;
-      border: 1px solid var(--border-color) !important;
-      border-radius: 20px !important;
+    .markdown-section h2 {
+      margin-top: 3.5em;
       font-family: 'Noto Sans', sans-serif;
+      font-weight: 600;
+      color: #222;
+      border-left: 5px solid var(--theme-color);
+      padding-left: 20px;
     }
 
-    /* Responsive adjustments */
+    /* Support LaTeX */
+    .katex-display {
+      background: #ffffff;
+      padding: 2em;
+      border: 1px solid var(--border-color);
+      border-radius: 2px;
+      margin: 2.5em 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    }
+
+    /* Media Queries */
     @media screen and (max-width: 768px) {
-      .markdown-section { padding: 20px; }
-      .sidebar-toggle { background: var(--paper-bg); opacity: 0.9; }
+      .sidebar-toggle {
+        top: 0 !important;
+        left: 0 !important;
+        border-radius: 0 0 8px 0 !important;
+      }
+      .markdown-section {
+        padding: 60px 20px;
+      }
     }
-
-    /* Style des liens */
-    section.content a {
-      color: var(--theme-color);
-      text-decoration: underline;
-      text-underline-offset: 4px;
-    }
-  </style>
+  </style>  
+ 
 </head>
 <body>
   <div id="app">Chargement de la Matrice Isomorphique...</div>
