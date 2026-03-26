@@ -1,196 +1,21 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PROTOKIN // MONOLITHE</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.3.0/marked.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg-monolithe: #0a0a0c;
-            --accent: #3b82f6;
-            --text-muted: #94a3b8;
-        }
-        body {
-            background-color: var(--bg-monolithe);
-            color: #e2e8f0;
-            font-family: 'Inter', sans-serif;
-            overflow: hidden;
-        }
-        .mono { font-family: 'JetBrains Mono', monospace; }
-        .glass {
-            background: rgba(15, 15, 20, 0.8);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-        }
-        .sidebar-scroll::-webkit-scrollbar { width: 4px; }
-        .sidebar-scroll::-webkit-scrollbar-thumb { background: #2d2d35; border-radius: 10px; }
-        .markdown-body h1 { font-size: 1.875rem; font-weight: 700; margin-bottom: 1.5rem; color: #fff; border-bottom: 1px solid #2d2d35; padding-bottom: 0.5rem; }
-        .markdown-body h2 { font-size: 1.5rem; font-weight: 600; margin-top: 2rem; margin-bottom: 1rem; color: var(--accent); }
-        .markdown-body p { margin-bottom: 1rem; line-height: 1.7; color: #cbd5e1; }
-        .markdown-body code { background: #1e1e26; padding: 0.2rem 0.4rem; border-radius: 4px; font-family: 'JetBrains Mono', monospace; font-size: 0.9em; }
-        .markdown-body blockquote { border-left: 4px solid var(--accent); padding-left: 1rem; font-style: italic; color: var(--text-muted); margin: 1.5rem 0; }
-        .matrix-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 4px; }
-        .matrix-cell { aspect-ratio: 1; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; cursor: pointer; transition: all 0.2s; border: 1px solid #1e1e26; }
-        .matrix-cell:hover { background: var(--accent); color: white; border-color: var(--accent); }
-        .active-link { color: var(--accent); border-left: 2px solid var(--accent); padding-left: 0.5rem; background: rgba(59, 130, 246, 0.05); }
-    </style>
+  <meta charset="UTF-8">
+  <title>Mon Site Markdown</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
 </head>
-<body class="h-screen flex flex-col md:flex-row overflow-hidden">
-
-    <!-- Sidebar Navigation -->
-    <aside class="w-full md:w-80 h-1/3 md:h-full glass border-r border-white/5 flex flex-col z-20">
-        <div class="p-6 border-b border-white/5">
-            <h1 class="text-xl font-bold tracking-tighter mono flex items-center gap-2">
-                <span class="w-3 h-3 bg-blue-500 rounded-full animate-pulse"></span>
-                PROTOKIN <span class="text-blue-500/50">2.5</span>
-            </h1>
-            <p class="text-[10px] uppercase tracking-[0.2em] text-muted mt-1 opacity-50">Système de Maintenance du Réel</p>
-        </div>
-
-        <nav class="flex-1 overflow-y-auto p-4 sidebar-scroll space-y-8">
-            <!-- Axiomes Section -->
-            <div>
-                <h3 class="text-[10px] uppercase tracking-widest text-muted font-bold mb-3 px-2">02_AXIOMATIQUE</h3>
-                <ul class="space-y-1 text-sm text-slate-400" id="nav-axioms">
-                    <!-- JS Injected -->
-                </ul>
-            </div>
-
-            <!-- Opérateurs Section -->
-            <div>
-                <h3 class="text-[10px] uppercase tracking-widest text-muted font-bold mb-3 px-2">04_OPÉRATEURS</h3>
-                <ul class="space-y-1 text-sm text-slate-400" id="nav-operators">
-                    <!-- JS Injected -->
-                </ul>
-            </div>
-
-            <!-- Matrice Section -->
-            <div>
-                <h3 class="text-[10px] uppercase tracking-widest text-muted font-bold mb-3 px-2">03_MATRICE_5x5</h3>
-                <div class="matrix-grid px-2" id="nav-matrix">
-                    <!-- JS Injected -->
-                </div>
-            </div>
-        </nav>
-
-        <div class="p-4 border-t border-white/5 text-[10px] mono text-slate-500 flex justify-between">
-            <span>SOC 4.0 // STABLE</span>
-            <span id="file-counter">0 FILES</span>
-        </div>
-    </aside>
-
-    <!-- Main Content Area -->
-    <main class="flex-1 h-2/3 md:h-full overflow-y-auto relative bg-[#0d0d0f]">
-        <div id="content-loader" class="absolute top-0 left-0 w-full h-1 bg-blue-500 transform -translate-x-full transition-transform duration-500"></div>
-        
-        <article id="viewer" class="max-w-3xl mx-auto py-12 px-6 md:py-20 markdown-body">
-            <!-- Welcome View -->
-            <div class="space-y-6 text-center py-20">
-                <h2 class="text-4xl font-light text-white mono tracking-tighter">Initialisation de l'Exocortex</h2>
-                <p class="text-slate-400 max-w-md mx-auto">Sélectionnez un fragment de l'axiomatique ou un opérateur dans le menu pour commencer l'exploration transversale.</p>
-                <div class="flex justify-center gap-4 mt-10">
-                    <div class="w-12 h-[1px] bg-slate-800 self-center"></div>
-                    <span class="mono text-[10px] text-slate-600">STANDBY MODE</span>
-                    <div class="w-12 h-[1px] bg-slate-800 self-center"></div>
-                </div>
-            </div>
-        </article>
-    </main>
-
-    <script>
-        // -- DATA STORE (Simulation des fichiers .md générés) --
-        const vault = {
-            "AX-12": { title: "AX-12 // L'Observateur Inclus", content: `# AXIOME 12 // L'Observateur Inclus\n\n## 🔬 Le Microscope\nL'observateur fait partie du système. Il n'y a pas de vue de nulle part.\n\n## ⚙️ La Loi\nTout ce qui est dit est dit par un observateur.` },
-            "AX-13": { title: "AX-13 // Contextualité", content: `# AXIOME 13 // Contextualité et Cadrage\n\n## 🔬 Le Microscope\nLa vérité est fonction du cadre choisi.` },
-            "AX-14": { title: "AX-14 // Performativité", content: `# AXIOME 14 // Performativité de la Mesure\n\n## 🔬 Le Microscope\nMesurer, c'est modifier le réel.` },
-            "AX-15": { title: "AX-15 // Clôture Réflexive", content: `# AXIOME 15 // La Clôture Réflexive\n\n## 🔬 Le Microscope\nLe système boucle sur lui-même en forme de tore.` },
-            "AX-16": { title: "AX-16 // Inter-référentialité", content: `# AXIOME 16 // Inter-référentialité\n\n## 🔬 Le Microscope\nCoordination des coordinateurs.` },
-            "AX-17": { title: "AX-17 // Morphogenèse", content: `# AXIOME 17 // Morphogenèse Sociale\n\n## 🔬 Le Microscope\nL'émergence de la forme collective.` },
-            "AX-18": { title: "AX-18 // Responsabilité", content: `# AXIOME 18 // Responsabilité Informationnelle\n\n## 🔬 Le Microscope\nPuissance = Éthique.` },
-            "AX-19": { title: "AX-19 // Truth-tracking", content: `# AXIOME 19 // Suivi de la Vérité\n\n## 🔬 Le Microscope\nLa raison comme machine correctrice.` },
-            "AX-20": { title: "AX-20 // Synchro Holistique", content: `# AXIOME 20 // Synchronisation Holistique\n\n## 🔬 Le Microscope\nL'harmonie finale du Monolithe.` },
-            
-            "OP-01": { title: "OP-01 // Invagination", content: `# OPÉRATEUR 01 // L'Invagination\n\n## 🔬 Principe\nCréer de l'intérieur par le repli.` },
-            "OP-02": { title: "OP-02 // Flambage", content: `# OPÉRATEUR 02 // Le Flambage du Cortex\n\n## 🔬 Principe\nLa complexité naît de la contrainte.` },
-            "OP-03": { title: "OP-03 // Exosomatisation", content: `# OPÉRATEUR 03 // L'Exosomatisation\n\n## 🔬 Principe\nL'outil comme organe hors-corps.` },
-            "OP-04": { title: "OP-04 // Umwelt", content: `# OPÉRATEUR 04 // Umwelt et Porosité\n\n## 🔬 Principe\nLe réglage de la bulle de réalité.` },
-            "OP-05": { title: "OP-05 // Hystérésis", content: `# OPÉRATEUR 05 // Hystérésis Sédimentaire\n\n## 🔬 Principe\nLa trace gravée dans le temps.` },
-
-            "TH-4.3": { title: "TH-4.3 // Le Frein Psychique", content: `# THÈSE 4.3 // L'Inhibition Psychique\n\n## 🔬 Sommaire Analytique\nContre la *Schwärmerei*, instaurer une juridiction interne.` }
-        };
-
-        // -- INITIALIZATION --
-        function initNav() {
-            const axiomsNav = document.getElementById('nav-axioms');
-            const opsNav = document.getElementById('nav-operators');
-            const matrixNav = document.getElementById('nav-matrix');
-
-            // Build Axioms (12 to 20 for this demo)
-            for (let i = 12; i <= 20; i++) {
-                const id = `AX-${i}`;
-                axiomsNav.appendChild(createNavLink(id, `Axiome ${i}`));
-            }
-
-            // Build Operators
-            for (let i = 1; i <= 5; i++) {
-                const id = `OP-0${i}`;
-                opsNav.appendChild(createNavLink(id, `Opérateur 0${i}`));
-            }
-
-            // Build Matrix (simplified)
-            for (let i = 1; i <= 30; i++) {
-                const div = document.createElement('div');
-                div.className = "matrix-cell mono";
-                div.textContent = i === 18 ? "4.3" : ".";
-                if(i === 18) div.onclick = () => loadFile('TH-4.3');
-                matrixNav.appendChild(div);
-            }
-
-            document.getElementById('file-counter').textContent = `${Object.keys(vault).length} FRAGMENTS`;
-        }
-
-        function createNavLink(id, label) {
-            const li = document.createElement('li');
-            li.className = "px-2 py-1 cursor-pointer hover:text-white transition-colors mono text-[11px]";
-            li.textContent = `> ${label}`;
-            li.onclick = () => {
-                document.querySelectorAll('li').forEach(el => el.classList.remove('active-link'));
-                li.classList.add('active-link');
-                loadFile(id);
-            };
-            return li;
-        }
-
-        function loadFile(id) {
-            const loader = document.getElementById('content-loader');
-            const viewer = document.getElementById('viewer');
-            
-            // Effect
-            loader.style.transform = "translateX(0%)";
-            
-            setTimeout(() => {
-                const file = vault[id];
-                if (file) {
-                    viewer.innerHTML = marked.parse(file.content);
-                    viewer.scrollTo(0,0);
-                    // Add fade-in
-                    viewer.classList.add('animate-in', 'fade-in', 'duration-500');
-                } else {
-                    viewer.innerHTML = `<div class="p-10 text-center mono text-red-500">ERREUR 404 // FRAGMENT NON-TROUVÉ</div>`;
-                }
-                loader.style.transform = "translateX(100%)";
-                setTimeout(() => {
-                    loader.style.transition = "none";
-                    loader.style.transform = "translateX(-100%)";
-                    setTimeout(() => loader.style.transition = "transform 0.5s", 10);
-                }, 500);
-            }, 300);
-        }
-
-        window.onload = initNav;
-    </script>
+<body>
+  <div id="app">Chargement...</div>
+  <script>
+    window.$docsify = {
+      name: 'Mon Projet',
+      repo: 'votre-nom-utilisateur/votre-depot', // Lien vers votre GitHub
+      loadSidebar: true, // Pour avoir un menu à gauche
+      auto2top: true     // Remonte en haut de page lors d'un changement
+    }
+  </script>
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
 </body>
 </html>
