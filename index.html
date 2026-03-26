@@ -26,6 +26,13 @@
     window.$docsify = {
       name: 'Protokin',
       logo: '', //
+      search: {
+      maxAge: 86400000,
+      paths: 'auto',
+      placeholder: 'Rechercher...',
+      noData: 'Aucun résultat !',
+      depth: 6
+  }
       loadSidebar: true, // Pour avoir un menu à gauche
       auto2top: true     // Remonte en haut de page lors d'un changement
     }
