@@ -2,34 +2,116 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Mon Site Markdown</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
-
-<style>
-  /* Déplace le bouton du menu en haut à gauche sur mobile */
-  @media screen and (max-width: 768px) {
-    .sidebar-toggle {
-      bottom: auto !important;
-      top: 0 !important;
-      left: 0 !important;
-      background-color: rgba(255, 255, 255, 0.8); /* Fond léger pour plus de visibilité */
-      padding: 10px !important;
+  <title>PROTOKIN - Physique et Politique du Geste</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,edge=1" />
+  <meta name="description" content="Traité des opérations du réel - Matrice Isomorphique">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  
+  <!-- Thème Docsify (Style Sombre pour l'esthétique technique) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  
+  <style>
+    :root {
+      /* Palette Protokin : Noir profond, Gris technique, Accents de tension */
+      --theme-color: #e63946; /* Rouge de tension */
+      --base-background: #0f0f0f;
+      --sidebar-background: #1a1a1a;
+      --text-color: #e0e0e0;
+      --sidebar-nav-link-color: #a0a0a0;
     }
-  }
-</style>
 
+    body {
+      font-family: 'Noto Serif', 'Georgia', serif; /* Rappel du style NRF */
+      background-color: var(--base-background);
+      color: var(--text-color);
+    }
+
+    .sidebar {
+      background-color: var(--sidebar-background);
+      border-right: 1px solid #333;
+    }
+
+    .sidebar-nav li a {
+      font-family: 'Noto Sans', sans-serif;
+      font-weight: 300;
+    }
+
+    .markdown-section h1, .markdown-section h2, .markdown-section h3 {
+      font-family: 'Noto Sans', sans-serif;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: #ffffff;
+    }
+
+    /* Style des équations LaTeX */
+    .katex {
+      font-size: 1.1em !important;
+    }
+
+    /* Personnalisation de la barre de recherche */
+    .search input {
+      background-color: #222 !important;
+      border: 1px solid #444 !important;
+      color: white !important;
+    }
+    
+    /* Animation de transition */
+    section.content {
+      transition: opacity 0.3s ease;
+    }
+  </style>
 </head>
 <body>
-  <div id="app">Chargement...</div>
+  <div id="app">Initialisation du Système PROTOKIN...</div>
+
   <script>
     window.$docsify = {
-      name: 'Protokin',
-      logo: '', //
-      loadSidebar: true, // Pour avoir un menu à gauche
-      auto2top: true     // Remonte en haut de page lors d'un changement
+      name: 'PROTOKIN',
+      repo: '',
+      loadSidebar: true, // Nécessite un fichier _sidebar.md
+      loadNavbar: false,
+      mergeNavbar: true,
+      maxLevel: 4,
+      subMaxLevel: 2,
+      auto2top: true,
+      homepage: 'INTRODUCTION.md', // Votre fichier d'accueil
+      
+      // Configuration de la recherche
+      search: {
+        maxAge: 86400000,
+        paths: 'auto',
+        placeholder: 'Rechercher un concept (Hystérésis, Flux...)',
+        noData: 'Aucun résultat trouvé.',
+        depth: 6
+      },
+
+      // Pagination
+      pagination: {
+        previousText: 'Phase Précédente',
+        nextText: 'Phase Suivante',
+        crossChapter: true,
+        crossChapterText: true,
+      },
+
+      // Support LaTeX (via KaTeX)
+      formatUpdated: '{MM}/{DD} {HH}:{mm}',
+      executeScript: true
     }
   </script>
-  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+
+  <!-- Scripts Docsify -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+
+  <!-- Support LaTeX -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css"/>
+
+  <!-- Prism pour la coloration syntaxique (si besoin de code technique) -->
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-markdown.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
+
 </body>
 </html>
