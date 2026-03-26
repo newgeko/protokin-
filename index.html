@@ -37,6 +37,39 @@
       line-height: 1.75;
     }
 
+/* --- REFONTE DU BOUTON SIDEBAR (TOGGLE) --- */
+    .sidebar-toggle {
+      background-color: var(--sidebar-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 0 8px 8px 0; /* Arrondi seulement sur la droite */
+      padding: 15px 12px 12px 12px !important;
+      left: 0 !important;
+      top: 20px !important;
+      width: 44px;
+      height: 44px;
+      transition: all 0.3s ease;
+      box-shadow: 2px 0 10px rgba(0,0,0,0.05);
+      z-index: 100;
+    }
+
+    .sidebar-toggle:hover {
+      background-color: #fff;
+      width: 50px;
+    }
+
+    .sidebar-toggle span {
+      background-color: var(--theme-color) !important;
+      height: 2px !important;
+      width: 22px !important;
+      margin-bottom: 5px !important;
+      border-radius: 2px;
+    }
+
+    /* Style quand la sidebar est ouverte */
+    body.close .sidebar-toggle {
+      left: 0 !important;
+    }
+
     /* Sidebar : Style Bibliothèque Classique */
     .sidebar {
       background-color: var(--sidebar-background);
