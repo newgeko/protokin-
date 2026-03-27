@@ -20,9 +20,7 @@ Une entité n’est pas définie par une essence stable, mais par sa capacité �
 
 Cette condition est formalisée par la relation :
 
-$$
-x = Op(x)
-$$
+$$ x = Op(x) $$
 
 où :
 - \( x \) désigne une structure ;
