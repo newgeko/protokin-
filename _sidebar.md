@@ -1,4 +1,4 @@
 - [Accueil](README.md)
 - [Mon premier chapitre](chapitre1.md)
-- [Typologie](typologie.md)
+- [Typologie logico-formelle](typologie.md)
 - [À propos](contact.md)
