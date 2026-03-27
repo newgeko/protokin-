@@ -3,4 +3,5 @@
 - [Typologie logico-formelle](typologie.md)
 - [Du physique au biologique](duphysiqueaubiologique.md)
 - [Individuation technique et IA](individuationtechnique.md)
+- [Ontologie de l'erreur](ontologiedelerreur.md)
 - [À propos](contact.md)
