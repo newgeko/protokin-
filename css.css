@@ -1,0 +1,102 @@
+/* --- DESIGN SYSTEM PROTOKIN (Intégré) --- */
+    :root {
+      --theme-color: #2c3e50;
+      --base-background: #ffffff;
+      --sidebar-background: #fdfdfd;
+      --text-color: #1a1a1a;
+      --text-muted: #666666;
+      --accent-color: #8e44ad;
+      --border-color: #eeeeee;
+      --font-serif: 'Noto Serif', 'Georgia', serif;
+      --font-sans: 'Inter', system-ui, sans-serif;
+    }
+
+    body {
+      font-family: var(--font-serif);
+      color: var(--text-color);
+      background-color: var(--base-background);
+      line-height: 1.8;
+    }
+
+    /* Ajustement de la section de contenu */
+    .markdown-section {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 3rem 45px 5rem;
+      font-size: 1.15rem;
+    }
+
+    /* Typographie NRF */
+    h1, h2, h3 {
+      font-family: var(--font-serif);
+      color: var(--theme-color);
+      margin-top: 2.5em;
+      font-weight: 700;
+    }
+
+    h1 { font-size: 2.8rem; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem; }
+    h2 { font-size: 1.9rem; border-left: 5px solid var(--theme-color); padding-left: 1.2rem; margin-top: 3rem; }
+    h3 { font-size: 1.5rem; font-style: italic; color: #444; }
+
+    p { margin-bottom: 1.8rem; text-align: justify; }
+
+    /* Blocs d'équations et technique */
+    .math.display {
+      background: #f9f9f9;
+      padding: 2rem;
+      border-radius: 4px;
+      margin: 2.5rem 0;
+      border: 1px solid var(--border-color);
+      box-shadow: inset 0 1px 3px rgba(0,0,0,0.02);
+    }
+
+    blockquote {
+      border-left: 4px solid var(--accent-color);
+      color: var(--text-muted);
+      font-style: italic;
+      margin: 2.5rem 0;
+      padding: 1rem 2rem;
+      background-color: #fcfcfc;
+    }
+
+    code {
+      font-family: 'Fira Code', monospace;
+      background-color: #f4f4f4;
+      padding: 0.2rem 0.5rem;
+      border-radius: 3px;
+      font-size: 0.9em;
+    }
+
+    /* Sidebar (Le Registre) */
+    .sidebar {
+      background-color: var(--sidebar-background);
+      border-right: 1px solid var(--border-color);
+      font-family: var(--font-sans);
+    }
+
+    .sidebar-nav li a {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    .sidebar-nav li.active > a {
+      color: var(--theme-color);
+      font-weight: 700;
+      border-right: 3px solid var(--theme-color);
+    }
+
+    /* Interface de recherche */
+    .search input {
+      border-radius: 20px !important;
+      background: #f0f0f0 !important;
+      padding: 10px 15px !important;
+    }
+
+    /* Mobile */
+    @media screen and (max-width: 768px) {
+      .markdown-section {
+        padding: 2rem 25px;
+        text-align: left;
+      }
+      h1 { font-size: 2.2rem; }
+    }
