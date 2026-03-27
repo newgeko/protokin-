@@ -5,4 +5,4 @@
 - [Individuation technique et IA](individuationtechnique.md)
 - [Ontologie de l'erreur](ontologiedelerreur.md)
 - [L'invagination comme opération ontologique](linvaginationcommeoperationontologique.md)
-- [À propos](contact.md)
+- [À propos](apropos.md)
