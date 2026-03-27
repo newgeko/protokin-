@@ -2,4 +2,5 @@
 - [Mon premier chapitre](chapitre1.md)
 - [Typologie logico-formelle](typologie.md)
 - [Du physique au biologique](duphysiqueaubiologique.md)
+- [Individuation technique et IA](individuationtechnique.md)
 - [À propos](contact.md)
