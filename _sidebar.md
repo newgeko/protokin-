@@ -1,5 +1,5 @@
 - [Accueil](README.md)
 - [Mon premier chapitre](chapitre1.md)
 - [Typologie logico-formelle](typologie.md)
-- [Du physique au biologique](duphysique maubiologique.md)
+- [Du physique au biologique](duphysique mubiologique.md)
 - [À propos](contact.md)
