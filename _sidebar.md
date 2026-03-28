@@ -1,5 +1,5 @@
 - [Accueil](README.md)
-- [Système axiomatique minimal](systemeaxiomatiqueminimal.md)
+- [Système axiomatique minimal](systemeaxiomatiqueminimal)
 - [Mon premier chapitre](chapitre1.md)
 - [Typologie logico-formelle](typologie.md)
 - [Du physique au biologique](duphysiqueaubiologique.md)
