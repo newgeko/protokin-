@@ -1,4 +1,4 @@
-# Invariance opératoire et individuation métastable :  
+# Protokin et le Point Fixe de l'Etre 
 ## Vers une ontologie des processus
 
 ---
