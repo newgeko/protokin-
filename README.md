@@ -64,6 +64,64 @@ Il ne s’agit pas d’une identité logique (au sens de la réflexivité), mais
 (D4) Un système x est invariant opératoirement si son état est produit, à chaque instant pertinent, par l’application d’une opération qui le reproduit.
 L’identité devient ainsi relative à un processus, et non à un substrat.
 
+## 7. Le Protokin : Atome cinétique et point fixe
+
+L’introduction de la condition d’invariance opératoire, exprimée par la relation $x = Op(x)$, appelle nécessairement une détermination ontologique de l’unité qu’elle implique. En effet, si l’être ne peut plus être conçu comme une substance donnée, mais comme un effet de bouclage opératoire, alors il devient indispensable de nommer l’unité minimale de ce processus.
+
+Nous proposons pour cela le concept de **Protokin**.
+
+> **(D6) — Définition du Protokin**  
+> Le Protokin est l’unité minimale de processus transductif satisfaisant la condition d’invariance opératoire. Il constitue l’atome cinétique d’une ontologie des processus, défini non par sa composition matérielle, mais par sa capacité à se maintenir comme point fixe d’une opération.
+
+Ainsi défini, le Protokin ne désigne pas un objet, mais une **fonction de persistance**. Il ne possède pas d’essence préalable : il est ce qui se maintient en tant que résultat d’une opération qui se reproduit elle-même.
+
+---
+
+### 7.1. De la particule à l’impulsion auto-stabilisée
+
+Le terme *Protokin* — du grec *protos* (premier) et *kinêsis* (mouvement) — indique que l’identité ne précède pas le mouvement, mais en constitue l’effet stabilisé. Il ne s’agit donc plus de penser l’être comme une entité inertielle, mais comme une impulsion originaire capable de se refermer sur elle-même.
+
+Contrairement à l’atome physique, dont la persistance est traditionnellement expliquée par des propriétés intrinsèques ou des lois de conservation, le protokin persiste par **itération opératoire**. Autrement dit, il ne dure pas parce qu’il est stable, mais il est stable parce qu’il se reproduit.
+
+Cette substitution conceptuelle est décisive : elle remplace une ontologie de la substance par une ontologie du **processus auto-stabilisé**.
+
+---
+
+### 7.2. Le point fixe comme lieu de l’être
+
+Dans ce cadre, la notion de *point fixe* doit être comprise en un sens strictement opératoire. Il ne s’agit pas d’une position dans l’espace, mais d’une condition de convergence.
+
+On peut formaliser cette idée de la manière suivante :
+
+$$
+x = Op(x)
+$$
+
+Le point fixe correspond alors à une situation dans laquelle l’application de l’opération ne modifie pas l’identité du système.
+
+Deux cas doivent être distingués :
+
+- Si $Op(x)$ diverge, le processus ne parvient pas à se stabiliser : le protokin se dissout dans un régime entropique.
+- Si $Op(x)$ converge, une stabilité dynamique émerge : le protokin accède à une forme d’existence temporelle.
+
+Dès lors, l’existence d’une entité peut être redéfinie comme la **robustesse de son point fixe** face aux perturbations. Cette robustesse n’est pas une propriété statique, mais une capacité à maintenir l’invariance à travers la transformation.
+
+Dans cette perspective, les systèmes complexes — qu’ils soient biologiques, techniques ou sociaux — peuvent être interprétés comme des **architectures de protokins imbriqués**, chaque niveau d’organisation correspondant à une itération opératoire spécifique.
+
+---
+
+### 7.3. Fonction structurante dans l’économie du texte
+
+L’introduction du concept de Protokin à ce stade du développement théorique répond à une nécessité architectonique.
+
+- **Transition logique** : après l’énoncé formel de l’invariance opératoire, il devient nécessaire de déterminer ce qui satisfait cette condition. Le Protokin fournit cette détermination.
+- **Consolidation sémantique** : il permet d’ancrer conceptuellement l’ontologie proposée en identifiant une unité minimale clairement définie.
+- **Ouverture modale** : il prépare l’analyse des régimes de nécessité et de contingence, en permettant de qualifier un système comme nécessaire dans la mesure où son protokin résiste aux perturbations.
+
+Ainsi, le Protokin ne constitue pas un simple ajout terminologique, mais une **charnière conceptuelle** assurant la cohérence entre formalisation mathématique et interprétation ontologique.
+
+---
+
 ## Reformulation modale : la nécessité comme stabilité
 
 Cette approche permet de reconfigurer les notions modales. Chez Saul Kripke, la nécessité est définie en termes de vérité dans tous les mondes possibles.
