@@ -1,5 +1,5 @@
 # Protokin et le Point Fixe de l'Etre 
-## Vers une ontologie des processus
+## Vers une ontologie des processus et de la viabilité 
 
 ---
 
