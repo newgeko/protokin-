@@ -5,7 +5,7 @@
 
 ## Résumé
 
-Cet article propose une refondation ontologique fondée sur la primauté des processus dynamiques et des régimes de stabilisation. S’inscrivant dans le prolongement de la philosophie de l’individuation, il introduit le concept d’**invariance opératoire** comme condition formelle de la persistance. Contre les ontologies substantialistes, il est soutenu que les entités doivent être comprises comme des processus métastables satisfaisant une contrainte récursive du type *x = Op(x)*, où l’identité n’est pas logique mais opératoire.
+Cet article propose une refondation ontologique fondée sur la primauté des processus dynamiques et des régimes de stabilisation. S’inscrivant dans le prolongement de la philosophie de l’individuation, il introduit le concept d’**invariance opératoire** comme condition formelle de la persistance. Contre les ontologies substantialistes, il est soutenu que les entités doivent être comprises comme des processus métastables satisfaisant une contrainte récursive du type $x = Op(x)$, où l’identité n’est pas logique mais opératoire.
 
 Après avoir distingué les processus transductifs des transitions d’état, l’article établit une typologie des régimes d’individuation (physique et biologique), puis propose une reformulation modale de la nécessité comme stabilité sous transformation. L’introduction du concept de **Protokin** permet de déterminer l’unité minimale de cette ontologie. L’ensemble conduit à une ontologie des processus fondée sur la continuité transductive et la reproductibilité dynamique.
 
