@@ -7,5 +7,6 @@
 - [Individuation technique et IA](individuationtechnique.md)
 - [Ontologie de l'erreur](ontologiedelerreur.md)
 - [L'invagination comme opération ontologique](linvaginationcommeoperationontologique.md)
+- [Ontologie dynamique de la santé](santé.md)
 - [Glossaire](glossaire.md)
 - [À propos](apropos.md)
