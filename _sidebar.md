@@ -1,6 +1,7 @@
 - [Accueil](README.md)
 - [Système axiomatique minimal](systemeaxiomatiqueminimal)
 - [Mon premier chapitre](chapitre1.md)
+- [Opérateurs logico-formels](operateurlogico.md)
 - [Typologie logico-formelle](typologie.md)
 - [Du physique au biologique](duphysiqueaubiologique.md)
 - [Individuation technique et IA](individuationtechnique.md)
