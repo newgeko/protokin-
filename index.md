@@ -97,7 +97,7 @@ L’identité biologique est donc fondamentalement dynamique et dépendante de p
 
 Le concept central peut maintenant être formulé de manière explicite :
 
-> **(F1)** *x = Op(x)*
+> **(F1)** *$x = Op(x)$*
 
 Cette relation ne correspond pas à une identité logique, mais à une condition de point fixe dynamique.
 
