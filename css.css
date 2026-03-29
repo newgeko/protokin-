@@ -100,3 +100,10 @@
       }
       h1 { font-size: 2.2rem; }
     }
+
+.katex-display {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  overflow-x: auto;
+}
