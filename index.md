@@ -9,6 +9,8 @@ Cet article propose une refondation ontologique fondée sur la primauté des pro
 
 Après avoir distingué les processus transductifs des transitions d’état, l’article établit une typologie des régimes d’individuation (physique et biologique), puis propose une reformulation modale de la nécessité comme stabilité sous transformation. L’introduction du concept de **Protokin** permet de déterminer l’unité minimale de cette ontologie. L’ensemble conduit à une ontologie des processus fondée sur la continuité transductive et la reproductibilité dynamique.
 
+Enfin, cette ontologie est adossée à un socle de contraintes physiques, informationnelles et biologiques (SOC), permettant de définir la persistance comme une propriété de systèmes ouverts hors équilibre. La dynamique de l’être est alors interprétée comme une stratification cybernétique, allant de la simple régulation à la réflexivité.
+
 ---
 
 ## 1. Introduction : critique du paradigme substantialiste
@@ -105,6 +107,45 @@ L’identité devient ainsi une fonction de la dynamique interne du système.
 
 ---
 
+## 6bis. Le socle de contraintes (SOC)
+
+L’invariance opératoire ne peut être conçue indépendamment des contraintes physiques qui conditionnent la persistance des systèmes réels.
+
+Nous introduisons le concept de **SOC (Socle de Contraintes)**, défini comme l’ensemble minimal de lois gouvernant la viabilité d’un système dynamique.
+
+> **(SOC1)** Un système ne peut satisfaire x = Op(x) que s’il respecte des contraintes :
+> - énergétiques (thermodynamique),
+> - informationnelles (réduction d’incertitude),
+> - organisationnelles (clôture et régulation).
+
+Ainsi, l’invariance opératoire n’est pas une propriété logique pure, mais une **propriété physiquement contrainte**.
+
+---
+
+### 6bis.1 Contraintes thermodynamiques
+
+La persistance implique une dissipation d’énergie et un maintien hors équilibre.
+
+---
+
+### 6bis.2 Contraintes informationnelles
+
+Le système doit réduire l’incertitude de ses interactions avec l’environnement.
+
+---
+
+### 6bis.3 Contraintes organisationnelles
+
+La persistance suppose une frontière et une capacité de régulation.
+
+---
+
+### 6bis.4 Reformulation
+
+> Exister = satisfaire x = Op(x) sous contraintes SOC
+
+---
+
 ## 7. Le Protokin : unité minimale de l’être opératoire
 
 L’introduction de l’invariance opératoire implique la détermination d’une unité minimale.
@@ -135,6 +176,55 @@ L’existence peut être redéfinie comme la stabilité d’un point fixe sous p
 
 ---
 
+## 7bis. Stratification cybernétique de l’être
+
+L’invariance opératoire ne se réalise pas uniformément. Elle se déploie selon des niveaux de complexité que l’on peut interpréter comme une stratification cybernétique.
+
+Nous distinguons quatre régimes :
+
+---
+
+### 7bis.1 Niveau 1 — Régulation (1°C)
+
+Le système maintient ses variables par feedback.
+
+> x = Op(x) via correction d’erreur
+
+---
+
+### 7bis.2 Niveau 2 — Auto-organisation (2°C)
+
+Le système modifie sa structure pour maintenir sa viabilité.
+
+---
+
+### 7bis.3 Niveau 3 — Autopoïèse (3°C)
+
+Le système produit et maintient sa propre frontière.
+
+---
+
+### 7bis.4 Niveau 4 — Réflexivité (4°C)
+
+Le système modélise son environnement et lui-même.
+
+---
+
+### 7bis.5 Reformulation
+
+> L’être n’est pas seulement opératoire, il est stratifié cybernétiquement.
+
+---
+
+### 7bis.6 Conséquence ontologique
+
+L’existence devient une fonction de :
+
+- la stabilité opératoire
+- le niveau de complexité cybernétique
+
+---
+
 ## 8. Modalité et stabilité
 
 La théorie modale classique repose sur la notion de mondes possibles. Nous proposons une alternative fondée sur la dynamique.
@@ -142,6 +232,10 @@ La théorie modale classique repose sur la notion de mondes possibles. Nous prop
 > **(M1)** ◻x si et seulement si *x* est invariant sous toutes les transformations admissibles.
 
 La nécessité devient une propriété de robustesse transformationnelle.
+
+La nécessité peut également être interprétée comme une stabilité à travers les niveaux cybernétiques.
+
+Un système est nécessaire s’il maintient son invariance opératoire à travers plusieurs régimes de régulation.
 
 ---
 
@@ -203,6 +297,14 @@ L’opération constitue son propre domaine.
 L’ontologie proposée substitue à la substance une logique de la reproduction. L’existence n’est pas un donné, mais un processus.
 
 > Exister, c’est se maintenir comme effet d’une opération capable de se reproduire.
+
+L’être apparaît alors comme un processus contraint, stratifié et régulé, dont la persistance dépend à la fois :
+
+- de sa capacité opératoire,
+- de son inscription dans un socle de contraintes,
+- et de son niveau de complexité cybernétique.
+
+Ainsi, exister ne consiste pas seulement à se reproduire, mais à se maintenir à un niveau optimal de viabilité dans un espace de contraintes.
 
 ---
 
