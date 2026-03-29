@@ -58,11 +58,20 @@
         crossChapter: true,
       },
 
-      footer: {
-        copy: '<span>© 2026 PROTOKIN</span>',
-        auth: 'Ontologie Formelle',
-        pre: '<hr/>',
+     plugins: [
+      function (hook, vm) {
+        hook.afterEach(function (html) {
+          return html + `
+            <hr/>
+            <footer style="text-align:center; font-size:0.9em; padding:20px; color:#999;">
+              <div>© 2026 PROTOKIN</div>
+              <div>Ontologie Formelle</div>
+            </footer>
+          `;
+        });
       }
+    ]
+
     }
   </script>
 
