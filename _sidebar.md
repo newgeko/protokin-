@@ -1,6 +1,6 @@
 - [Accueil](README.md)
 - [Système axiomatique minimal](systemeaxiomatiqueminimal)
-- [Intégration des sciences physiques](integrationdessciencesphysiques.md]
+- [Intégration des sciences physiques](integrationdessciencesphysiques.md)
 - [Opérateurs logico-formels](operateurlogico.md)
 - [Typologie logico-formelle](typologie.md)
 - [Du physique au biologique](duphysiqueaubiologique.md)
