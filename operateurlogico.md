@@ -111,9 +111,9 @@ Définitions :
 ### 5.1 Logique dynamique
 
 Forme générale :
-\[
+$$\[
 [\alpha]p \quad \text{et} \quad \langle \alpha \rangle p
-\]
+\]$$
 
 - [α]p : après toute exécution de α, p est vrai
 - ⟨α⟩p : il existe une exécution de α rendant p vrai
