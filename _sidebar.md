@@ -1,4 +1,5 @@
 - [Accueil](README.md)
+- [Le SOC protokinien](SOC.md)
 - [Système axiomatique minimal](systemeaxiomatiqueminimal)
 - [Intégration des sciences physiques](integrationdessciencesphysiques.md)
 - [Opérateurs logico-formels](operateurlogico.md)
