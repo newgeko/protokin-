@@ -49,6 +49,17 @@
       // LaTeX
       executeScript: true
     }
+
+markdown: {
+    latexRender: function(content) {
+      return content.replace(/\$\$([\s\S]+?)\$\$/g, (match, code) => {
+        return katex.renderToString(code, { displayMode: true });
+      }).replace(/\$([\s\S]+?)\$/g, (match, code) => {
+        return katex.renderToString(code, { displayMode: false });
+      });
+    }
+  }
+}
   </script>
 
   <!-- Docsify Core -->
