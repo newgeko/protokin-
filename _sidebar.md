@@ -1,7 +1,7 @@
 - [Accueil](README.md)
 - [Le SOC protokinien](SOC.md)
 - [Stratification cybernétique](stratificationcybernetique.md)
-- [Système axiomatique minimal](systemeaxiomatiqueminimal)
+- [Système axiomatique minimal](systemeaxiomatiqueminimal.md)
 - [Intégration des sciences physiques](integrationdessciencesphysiques.md)
 - [Opérateurs logico-formels](operateurlogico.md)
 - [Typologie logico-formelle](typologie.md)
