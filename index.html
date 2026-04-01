@@ -50,10 +50,17 @@
       name: '<div style="font-family:Noto Sans; font-weight:700; letter-spacing:2px;">PROTOKIN</div>',
       repo: '',
       loadSidebar: true,
+	  loadNavbar: true,
       autoHeader: true,
       subMaxLevel: 3,
       auto2top: true,
       homepage: 'index.md',
+	  
+	  // CONFIGURATION LATEX
+	latex: {
+		inlineMath: [['$', '$'], ['\\(', '\\)']], // Délimiteurs en ligne : $...$
+		displayMath: [['$$', '$$'], ['\\[', '\\]']], // Délimiteurs bloc : $$...$$
+	},
       
       // Plugin Recherche
       search: {
@@ -88,20 +95,16 @@
     }
   </script>
 
+
+  
+<script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsify-latex@0"></script>
+
   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
-  
-  <script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
-  
-  <script src="https://cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
-
   <script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/docsify-footer-enhancement/dist/docsify-footer-enhancement.min.js"></script> 
-
- <script src="https://cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-footer-enhancement/dist/docsify-footer-enhancement.min.js"></script> 
+  <script src="https://cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/docsify-reading-progress/dist/docsify-reading-progress.min.js"></script>
 
 </body>
 </html>
